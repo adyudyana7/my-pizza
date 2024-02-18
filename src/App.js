@@ -1,28 +1,23 @@
-// import FirstCar from "./components/FirtsCar";
-// import FoodList from "./components/FoodList";
-import Header from "./components/Header";
-// import Action from "./components/Action/Action";
-// import FirstCar from "./components/FirtsCar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Action from "./components/pages/Action/Action";
+import Menu from "./components/pages/Menu/Menu";
+import Company from "./components/pages/Company/Company";
+import Fillials from "./components/pages/Fillials/Fillials";
+import Contacts from "./components/pages/Contacts/Contacts";
 
 function App() {
   return (
-    <div className="px-[150px] pt-[40px]">
-      <Header />
-
-      {/* <FoodList /> */}
-      {/* {/* <Action /> */}
-      {/* <FirstCar /> */}
-      {/* <Typography sx={{ fontSize: "100px" }}>MY PIZZA </Typography> */}
-      {/* <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/FTRN_WkDeKM?si=hxf14f-PZNL86n0U"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe> */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/action" element={<Action />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/fillials" element={<Fillials />} />
+        <Route path="/company" element={<Company />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
