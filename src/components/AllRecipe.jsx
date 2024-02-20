@@ -12,6 +12,11 @@ function AllRecipe() {
   useEffect(() => {
     getRecipes();
   }, []);
+
+  function getRandomPrice() {
+    return Math.floor(Math.random() * (200 - 49 + 1) + 50);
+  }
+
   return (
     <Box
       sx={{
@@ -31,7 +36,7 @@ function AllRecipe() {
             flexDirection: "column",
             padding: "30px",
             border: "3px solid ",
-            color: "pink",
+            color: "grey",
             borderRadius: "30px",
             width: "260px",
             paddingRight: "10px",
@@ -56,7 +61,6 @@ function AllRecipe() {
           >
             <img width="250" height="260" src={item.image} alt="" />
           </Box>
-          <Box></Box>
 
           <Typography
             sx={{ fontSize: "20px", fontWeight: "700", color: "black" }}
@@ -71,14 +75,13 @@ function AllRecipe() {
           <Box
             sx={{
               display: "flex",
-
               justifyContent: "flex-end",
               alignItems: "flex-end",
               paddingRight: "18px",
             }}
           >
             <Typography sx={{ color: "black", fontWeight: "600" }}>
-              100$
+              {getRandomPrice()}$
             </Typography>
           </Box>
         </Box>
