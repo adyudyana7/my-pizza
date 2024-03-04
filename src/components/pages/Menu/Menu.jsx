@@ -12,6 +12,10 @@ function Menu() {
   useEffect(() => {
     getRecipes();
   }, []);
+
+  function getRandomPrice() {
+    return Math.floor(Math.random() * (200 - 49 + 1) + 50);
+  }
   return (
     <Box>
       <Box>
@@ -88,7 +92,7 @@ function Menu() {
               }}
             >
               <Typography sx={{ color: "black", fontWeight: "600" }}>
-                100$
+                {getRandomPrice()}$
               </Typography>
             </Box>
           </Box>

@@ -16,6 +16,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CallIcon from "@mui/icons-material/Call";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Link } from "react-router-dom";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 
 function Header() {
   return (
@@ -54,7 +55,12 @@ function Header() {
                 <LocalPizzaIcon />
               </IconButton>
               <Typography
-                sx={{ fontWeight: "600", fontSize: "14px", color: "black" }}
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "14px",
+                  color: "black",
+                  borderBottom: "none",
+                }}
               >
                 Меню
               </Typography>
@@ -139,7 +145,9 @@ function Header() {
               </Typography>
             </Button>
           </Link>
+          <ShoppingBasketIcon />
         </Box>
+
         <Link to="/company">
           <Button
             sx={{
@@ -199,19 +207,19 @@ function Header() {
             Звоните нам по номерам:
           </Typography>
           <Typography
-            sx={{ display: "flex", marginRight: "10px", paddingTop: "40px" }}
+            sx={{ display: "flex", marginRight: "40px", paddingTop: "40px" }}
           >
             <CallIcon /> 0(772)510707
           </Typography>
           <Typography
-            sx={{ display: "flex", marginRight: "10px", paddingTop: "40px" }}
+            sx={{ display: "flex", marginRight: "40px", paddingTop: "40px" }}
           >
-            <CallIcon /> 0(772)510707
+            <CallIcon /> 0(775)220807
           </Typography>
           <Typography
-            sx={{ display: "flex", marginRight: "10px", paddingTop: "40px" }}
+            sx={{ display: "flex", marginRight: "40px", paddingTop: "40px" }}
           >
-            <CallIcon /> 0(772)510707
+            <CallIcon /> 0(772)51038
           </Typography>
         </Box>
 
