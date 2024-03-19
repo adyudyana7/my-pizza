@@ -54,7 +54,7 @@ function Company() {
       </Box>
       <Box>
         <Carousel showThumbs={false} showStatus={false}>
-          <img width="50%" height="50%" src={Ip1} alt="" className="" />
+          <img width="600px" height="500px" src={Ip1} alt="" className="" />
           <img src={Ip2} alt="" className="" />
           <img src={Ip3} alt="" className="" />
           <img src={Ip4} alt="" className="" />

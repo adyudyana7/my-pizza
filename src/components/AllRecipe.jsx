@@ -1,8 +1,7 @@
 import { Box } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
-import Cart from "./Cart/Cart";
+import Card from "./Card/Card";
 
 function AllRecipe() {
   const [recipe, setRecipe] = useState([]);
@@ -21,7 +20,6 @@ function AllRecipe() {
         display: "flex",
         flexDirection: "row",
         paddingX: "60px",
-        // padding: "30px",
         flexWrap: "wrap",
         columnGap: "40px",
         rowGap: "30px",
@@ -29,7 +27,7 @@ function AllRecipe() {
     >
       {recipe.map((item) => (
         <Box key={item.id}>
-          <Cart item={item} />
+          <Card item={item} />
         </Box>
       ))}
     </Box>

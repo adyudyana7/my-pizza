@@ -1,33 +1,22 @@
-import React from "react";
-import { Typography, List, ListItem, ListItemText } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
-const Korzina = ({ cartItems }) => {
-  const totalPrice = cartItems.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
-
+function Korzina() {
   return (
-    <div>
-      <Typography variant="h5" gutterBottom>
-        Корзина
-      </Typography>
-      <List>
-        {cartItems.map((item, index) => (
-          <ListItem key={index}>
-            <ListItemText
-              primary={item.name}
-              secondary={`Количество: ${item.quantity}`}
-            />
-            <Typography variant="body2">
-              {item.price * item.quantity} руб.
-            </Typography>
-          </ListItem>
-        ))}
-      </List>
-      <Typography variant="h6">Итого: {totalPrice} руб.</Typography>
-    </div>
+    <Box>
+      <Box>
+        <Typography
+          sx={{
+            margin: "0 14.8%",
+            fontSize: "20px",
+            fontWeight: "500",
+            paddingTop: "60px",
+          }}
+        >
+          Корзина :
+        </Typography>
+        <Typography>Будет доставлен через: 1 ч 02 мин</Typography>
+      </Box>
+    </Box>
   );
-};
-
+}
 export default Korzina;

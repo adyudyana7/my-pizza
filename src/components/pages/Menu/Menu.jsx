@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -91,7 +91,27 @@ function Menu() {
                 paddingRight: "18px",
               }}
             >
-              <Typography sx={{ color: "black", fontWeight: "600" }}>
+              <Button
+                sx={{
+                  width: "180px",
+                  color: "black",
+                  borderRadius: "13px",
+                  marginRight: "20px",
+                  marginTop: "18px",
+                }}
+                variant="outlined"
+                // onClick={handleAddToCart}
+              >
+                ADDtocart
+              </Button>
+
+              <Typography
+                sx={{
+                  color: "black",
+                  fontWeight: "600",
+                  paddingBottom: "15px",
+                }}
+              >
                 {getRandomPrice()}$
               </Typography>
             </Box>

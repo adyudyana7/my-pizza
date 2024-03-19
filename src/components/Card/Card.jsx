@@ -1,8 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import Korzina from "../Korzina/Korzina";
 
-const Cart = ({ item, addToCart }) => {
-  // Добавляем пропс addToCart для передачи функции добавления в корзину
+const Card = ({ item }) => {
   const navigate = useNavigate();
 
   const toDetails = () => {
@@ -13,10 +13,9 @@ const Cart = ({ item, addToCart }) => {
     return Math.floor(Math.random() * (200 - 49 + 1) + 50);
   }
 
-  const handleAddToCart = () => {
-    // Создаем функцию для обработки нажатия на кнопку "Добавить в корзину"
-    addToCart(item); // Вызываем функцию добавления в корзину и передаем в нее выбранное блюдо
-  };
+  // const handleAddToCart = () => {
+  //   addToCart(item);
+  // };
 
   return (
     <Box
@@ -47,7 +46,7 @@ const Cart = ({ item, addToCart }) => {
           objectFit: "contain",
         }}
       >
-        <img width="250" height="260" src={item.image} alt="" />
+        <img x width="250" height="260" src={item.image} alt="" />
       </Box>
       <Typography sx={{ fontSize: "20px", fontWeight: "700", color: "black" }}>
         {item.name}
@@ -66,13 +65,12 @@ const Cart = ({ item, addToCart }) => {
         }}
       >
         <Button
-          sx={{ width: "180px" }}
+          onClick={Korzina}
+          sx={{ width: "180px", color: "black", borderRadius: "13px" }}
           variant="outlined"
-          onClick={handleAddToCart}
+          // onClick={handleAddToCart}
         >
-          {" "}
-          {/* Добавляем обработчик нажатия на кнопку */}
-          Добавить в корзину {/* Изменяем текст кнопки */}
+          ADDtocart
         </Button>
         <Typography
           sx={{ color: "black", fontWeight: "600", paddingBottom: "10px" }}
@@ -83,4 +81,4 @@ const Cart = ({ item, addToCart }) => {
     </Box>
   );
 };
-export default Cart;
+export default Card;

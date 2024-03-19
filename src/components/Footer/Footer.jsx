@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -85,9 +86,9 @@ function Footer() {
             paddingBottom: "50px",
           }}
         >
-          <Button>
+          <Link>
             <FacebookIcon sx={{ fontSize: "40px" }} />
-          </Button>
+          </Link>
           <Button>
             <InstagramIcon sx={{ fontSize: "40px" }} />
           </Button>

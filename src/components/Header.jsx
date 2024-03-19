@@ -10,6 +10,8 @@ import Piz4 from "../assets/Piz4.png";
 import Piz3 from "../assets/Piz3.png";
 import Piz1 from "../assets/Piz1.png";
 import Piz5 from "../assets/Piz5.png";
+import Ramadan from "../assets/Ramadan (2).png";
+
 import Logo from "../assets/Logo.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -145,7 +147,12 @@ function Header() {
               </Typography>
             </Button>
           </Link>
-          <ShoppingBasketIcon />
+
+          <Link>
+            <Button sx={{ marginLeft: "440px", color: "black", border: "5px" }}>
+              <ShoppingBasketIcon />
+            </Button>
+          </Link>
         </Box>
 
         <Link to="/company">
@@ -170,7 +177,7 @@ function Header() {
             <Typography
               sx={{
                 fontSize: "14px",
-
+                color: "black",
                 fontWeight: "600",
               }}
             >
@@ -180,6 +187,7 @@ function Header() {
         </Link>
       </Box>
       <Carousel showThumbs={false} showStatus={false}>
+        <img src={Ramadan} alt="" className="h-full" />
         <img src={Piz2} alt="" className="h-full" />
         <img src={Piz4} alt="" className="h-full" />
         <img src={Piz3} alt="" className="h-full" />
